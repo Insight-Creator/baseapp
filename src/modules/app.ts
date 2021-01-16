@@ -19,6 +19,7 @@ import { authReducer  } from './user/auth';
 import { beneficiariesReducer } from './user/beneficiaries';
 import { getGeetestCaptchaReducer } from './user/captcha';
 import { customizationUpdateReducer } from './user/customization';
+import { documentationReducer } from './user/documentation';
 import { sendEmailVerificationReducer } from './user/emailVerification';
 import { historyReducer  } from './user/history';
 import {
@@ -64,6 +65,10 @@ export const userReducer = combineReducers({
     beneficiaries: beneficiariesReducer,
     captcha: getGeetestCaptchaReducer,
     customizationUpdate: customizationUpdateReducer,
+<<<<<<< HEAD
+=======
+    documentation: documentationReducer,
+>>>>>>> e6743db87169805be51837ed41b61bbaf888ed68
     history: historyReducer,
     documents: documentsReducer,
     identity: identityReducer,

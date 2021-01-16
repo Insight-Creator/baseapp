@@ -48,6 +48,10 @@
     "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.3",
+<<<<<<< HEAD
+=======
+    "react-scroll": "^1.8.1",
+>>>>>>> e6743db87169805be51837ed41b61bbaf888ed68
     "recharts": "^1.8.5",
     "redux": "^4.0.1",
     "redux-saga": "^1.1.3",
