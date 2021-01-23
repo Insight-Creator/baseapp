@@ -47,8 +47,8 @@ interface DispatchProps {
     signIn: typeof signIn;
     signInError: typeof signInError;
     signInRequire2FA: typeof signInRequire2FA;
-    signUpRequireVerification: typeof signUpRequireVerification;
     resetCaptchaState: typeof resetCaptchaState;
+    signUpRequireVerification: typeof signUpRequireVerification;
 }
 
 interface SignInState {
@@ -85,12 +85,15 @@ class SignIn extends React.Component<Props, SignInState> {
     }
 
     public componentWillReceiveProps(nextProps: Props) {
+        const { email } = this.state;
+
         if (!this.props.isLoggedIn && nextProps.isLoggedIn) {
             this.props.resetCaptchaState();
             this.props.history.push('/wallets');
         }
-        if (this.props.requireEmailVerification) {
-            this.props.history.push('/email-verification');
+
+        if (nextProps.requireEmailVerification) {
+            this.props.history.push('/email-verification', { email: email });
         }
     }
 
@@ -313,8 +316,8 @@ const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> = dispat
     signIn: data => dispatch(signIn(data)),
     signInError: error => dispatch(signInError(error)),
     signInRequire2FA: payload => dispatch(signInRequire2FA(payload)),
-    signUpRequireVerification: data => dispatch(signUpRequireVerification(data)),
     resetCaptchaState: () => dispatch(resetCaptchaState()),
+    signUpRequireVerification: data => dispatch(signUpRequireVerification(data)),
 });
 
 export const SignInScreen = compose(

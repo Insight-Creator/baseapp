@@ -46,7 +46,6 @@ describe('recentTrade reducer', () => {
             date: 1547464388,
             price: '0.01',
             amount: '0.059',
-            total: '0.00059',
         },
         {
             tid: 162414,
@@ -54,7 +53,25 @@ describe('recentTrade reducer', () => {
             date: 1547464388,
             price: '0.01',
             amount: '0.01',
-            total: '0.0001',
+        },
+    ];
+
+    const fakeTradesAdjusted: PublicTrade[] = [
+        {
+            id: 162413,
+            price: '0.01',
+            amount: '0.059',
+            market: 'bchbtc',
+            created_at: '2019-01-14T11:13:08.000Z',
+            taker_type: 'sell',
+        },
+        {
+            id: 162414,
+            price: '0.01',
+            amount: '0.01',
+            market: 'bchbtc',
+            created_at: '2019-01-14T11:13:08.000Z',
+            taker_type: 'buy',
         },
     ];
 
@@ -129,7 +146,7 @@ describe('recentTrade reducer', () => {
         };
         expect(recentTradesReducer(initialState, recentTradesPush({ trades: fakeTradeEvents, market: 'bchbtc' }))).toEqual({
             loading: false,
-            list: fakeTrades.concat(trade),
+            list: fakeTradesAdjusted.concat(trade),
         });
     });
 
@@ -156,7 +173,7 @@ describe('recentTrade reducer', () => {
         Cryptobase.config.storage.defaultStorageLimit = 2;
         expect(recentTradesReducer(initialState, recentTradesPush({ trades: fakeTradeEvents, market: 'bchbtc' }))).toEqual({
             loading: false,
-            list: fakeTrades,
+            list: fakeTradesAdjusted,
         });
         Cryptobase.config.storage.defaultStorageLimit = initialLimit;
 

@@ -12,8 +12,10 @@
     "@formatjs/intl-relativetimeformat": "^7.0.0",
     "@ionic/cli": "^6.11.11",
     "@openware/cryptofont": "2.3.0",
+    "@openware/react-components": "^0.0.5",
     "@sentry/browser": "^5.17.0",
     "@types/compression-webpack-plugin": "^2.0.1",
+    "@types/react-select": "^3.1.2",
     "@types/ws": "^6.0.4",
     "@web3-react/core": "^6.1.1",
     "@web3-react/injected-connector": "^6.0.7",
@@ -51,7 +53,11 @@
 <<<<<<< HEAD
 =======
     "react-scroll": "^1.8.1",
+<<<<<<< HEAD
 >>>>>>> e6743db87169805be51837ed41b61bbaf888ed68
+=======
+    "react-select": "^3.2.0",
+>>>>>>> 63e2b1ffcdbf6b84a13ffbf44b818c109ae18c9f
     "recharts": "^1.8.5",
     "redux": "^4.0.1",
     "redux-saga": "^1.1.3",

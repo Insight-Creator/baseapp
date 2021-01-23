@@ -1,5 +1,3 @@
-import { en as customTranslations } from '../custom/translations/en';
-import { en as mobileTranslations } from '../mobile/translations/en';
 import { nationalitiesNames } from './nationalities';
 
 export const en = {
@@ -195,6 +193,7 @@ export const en = {
     'success.beneficiaries.activated': 'Beneficiaries: successfully activated',
     'success.beneficiaries.deleted': 'Beneficiaries: successfully deleted',
     'success.beneficiaries.resent_pin': 'Beneficiaries: pin resent',
+    'error.beneficiaries.max10.addresses': 'You can register up to 10 withdrawal addresses',
 
     'page.body.wallets.beneficiaries.title': 'Withdraw address',
     'page.body.wallets.beneficiaries.fiat.title': 'Withdrawal details',
@@ -310,6 +309,7 @@ export const en = {
 
     'page.body.profile.header.account': 'Profile',
 
+    'page.body.profile.header.account.nickname': 'Nickname',
     'page.body.profile.header.account.content.password': 'Password',
     'page.body.profile.header.account.content.password.button.change': 'Change',
     'page.body.profile.header.account.content.password.old': 'Old password',
@@ -547,6 +547,10 @@ export const en = {
     'page.header.signIn.resetPassword.error': 'Fields are empty or don`t matches',
 
     'page.header.signUp': 'Sign Up',
+    'page.header.signUp.nickname.minLength.error': 'Please, enter more characters. Min number of characters is 4',
+    'page.header.signUp.nickname.maxLength.error': 'Please, enter less characters. Maximum number of characters is 12',
+    'page.header.signUp.nickname.specialSymbols.error': 'Please,use only alpabetical characters and digits',
+    'page.header.signUp.nickname.uniqueness.error': 'This nickname is already taken',
     'page.header.signUp.email': 'Email',
     'page.header.signUp.email.message.error': 'Email is invalid',
     'page.header.signUp.password': 'Password',
@@ -923,6 +927,4 @@ export const en = {
     'metamask.error.unknown': '[MetaMask] An unknown error occurred. Check the console for more details',
 
     ...nationalitiesNames,
-    ...customTranslations,
-    ...mobileTranslations,
 };
