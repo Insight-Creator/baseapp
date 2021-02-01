@@ -16,7 +16,7 @@
     background: var(--body-background-color);
     border-radius: calc(var(--gap) * 0.66);
     margin: 0 auto;
-    min-height: calc(var(--big-gap) * 10);
+    min-height: max-content;
 
     &__options-group {
       border-bottom: 2px solid var(--divider-color-level-2);
@@ -24,12 +24,28 @@
       width: 100%;
     }
 
-    &__form-content {
-      top: calc(var(--gap) * 14.8);
-    }
-
     &__group {
       margin-bottom: calc(var(--gap) * 3.1);
+
+      &--focused {
+        .cr-sign-up-form__label {
+          color: var(--input-legend-color-active);
+        }
+
+        input {
+          border-color: var(--input-border-color-active) !important;
+        }
+      }
+
+      &--errored {
+        .cr-sign-up-form__label {
+          color: var(--input-border-color-error);
+        }
+
+        input {
+          border-color: var(--input-border-color-error) !important;
+        }
+      }
     }
 
     &__option {
@@ -38,16 +54,6 @@
       .__selected {
         border-bottom: 2px solid var(--primary-cta-color);
         color: var(--primary-text-color);
-      }
-    }
-
-    &__group--focused {
-      .cr-sign-up-form__label {
-        color: var(--input-legend-color-active);
-      }
-
-      input {
-        border-color: var(--input-border-color-active) !important;
       }
     }
 

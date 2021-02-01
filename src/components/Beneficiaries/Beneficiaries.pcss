@@ -38,11 +38,10 @@
   }
 
   .beneficiaries-add-address-modal--coin .cr-email-form {
-    min-height: calc(var(--big-gap) * 6.6);
-  }
-
-  .beneficiaries-add-address-modal--fiat .cr-email-form {
-    min-height: calc(var(--big-gap) * 12);
+    .pg-beneficiaries__error-text {
+      color: var(--system-red);
+      margin-left: 16px;
+    }
   }
 
   .beneficiaries-confirmation-modal .cr-email-form {
@@ -206,7 +205,7 @@
         &__block {
           display: flex;
           flex-direction: column;
-          margin-bottom: 23px;
+          margin-bottom: var(--email-form-padding);
           width: 100%;
 
           &:last-child {
@@ -500,11 +499,12 @@
 
   .beneficiaries-fail-modal {
     .cr-email-form {
-      min-height: calc(var(--big-gap) * 4);
+      min-height: unset;
 
       &__form-content {
         align-items: center;
         display: flex;
+        flex-direction: column;
         justify-content: center;
 
         &__info {
@@ -512,8 +512,7 @@
           color: var(--primary-text-color);
           font-size: 14px;
           font-weight: normal;
-          position: absolute;
-          top: 12px;
+          padding: 12px 0;
         }
       }
 

@@ -1,3 +1,5 @@
+import { en as customTranslations } from '../custom/translations/en';
+import { en as mobileTranslations } from '../mobile/translations/en';
 import { nationalitiesNames } from './nationalities';
 
 export const en = {
@@ -213,8 +215,10 @@ export const en = {
     'page.body.wallets.beneficiaries.addAddressModal.header': 'Add new withdrawal address',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.coinAddress': 'Blockchain Address',
+    'page.body.wallets.beneficiaries.addAddressModal.body.invalidAddress': 'Invalid Address',
     'page.body.wallets.beneficiaries.addAddressModal.body.coinBeneficiaryName': 'Beneficiary Name',
     'page.body.wallets.beneficiaries.addAddressModal.body.coinDescription': 'Description (optional)',
+    'page.body.wallets.beneficiaries.addAddressModal.body.coinDestinationTag': 'Destination Tag (optional)',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Description',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Full Name',
@@ -309,7 +313,7 @@ export const en = {
 
     'page.body.profile.header.account': 'Profile',
 
-    'page.body.profile.header.account.nickname': 'Nickname',
+    'page.body.profile.header.account.username': 'Username',
     'page.body.profile.header.account.content.password': 'Password',
     'page.body.profile.header.account.content.password.button.change': 'Change',
     'page.body.profile.header.account.content.password.old': 'Old password',
@@ -450,7 +454,7 @@ export const en = {
     /* KYC */
     'page.confirm.title.email': 'Get Verified your email',
     'page.confirm.title.phone': 'Get Verified your phone number',
-    'page.confirm.title.profile': 'Get Verified your Identity',
+    'page.confirm.title.profile': 'Get Verified your Profile',
     'page.confirm.title.document': 'Get Verified your Government Issued ID ',
     'page.confirm.title.address': 'Residence verification',
 
@@ -547,10 +551,9 @@ export const en = {
     'page.header.signIn.resetPassword.error': 'Fields are empty or don`t matches',
 
     'page.header.signUp': 'Sign Up',
-    'page.header.signUp.nickname.minLength.error': 'Please, enter more characters. Min number of characters is 4',
-    'page.header.signUp.nickname.maxLength.error': 'Please, enter less characters. Maximum number of characters is 12',
-    'page.header.signUp.nickname.specialSymbols.error': 'Please,use only alpabetical characters and digits',
-    'page.header.signUp.nickname.uniqueness.error': 'This nickname is already taken',
+    'page.header.signUp.username.minLength.error': 'Please, enter more characters. Min number of characters is 4',
+    'page.header.signUp.username.maxLength.error': 'Please, enter fewer characters. Maximum number of characters is 12',
+    'page.header.signUp.username.uniqueness.error': 'This username is already taken',
     'page.header.signUp.email': 'Email',
     'page.header.signUp.email.message.error': 'Email is invalid',
     'page.header.signUp.password': 'Password',
@@ -738,6 +741,7 @@ export const en = {
     'identity.session.missing_otp': 'The account has enabled 2FA but OTP code is missing',
     'identity.session.invalid_otp': 'OTP code is invalid',
 
+    'username.taken': 'This username is already taken',
     'first_name.invalid': 'First name is invalid',
     'last_name.invalid': 'Last name is invalid',
     'city.invalid': 'City is invalid',
@@ -795,6 +799,7 @@ export const en = {
 
     'resource.documents.missing_doc_expire': 'Documents expiration date is missing',
     'resource.documents.empty_doc_expire': 'Documents expiration date is missing or empty',
+    'resource.documents.expire_not_a_date' : 'Documents expiration is not a date',
     'resource.documents.missing_doc_type': 'Documents type is missing',
     'resource.documents.empty_doc_type': 'Documents type is missing or empty',
     'resource.documents.missing_doc_number': 'Documents number is missing',
@@ -927,4 +932,6 @@ export const en = {
     'metamask.error.unknown': '[MetaMask] An unknown error occurred. Check the console for more details',
 
     ...nationalitiesNames,
+    ...customTranslations,
+    ...mobileTranslations,
 };
